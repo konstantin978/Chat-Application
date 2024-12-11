@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 Login | Green Chat 🌿</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="heading">🌿 Welcome to the Green Chat 🌿</h1>
+    </header>
+
+    <main>
+
+        <section class="container">
+            <h1 class="title">Log In</h1>
+            <div class="form-container">
+                <form id="login-form" class="form">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" required placeholder="Your username">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" required placeholder="Your Password">
+                </form>
+            </div>
+
+            <div class="error_login">
+                <p>Invalid Username or Password</p>
+            </div>
+
+            <div class="switch">
+                <p>Don't have an account. <a href="signup.html">Sign Up</a></p>
+            </div>
+
+            <div class="submit-btn">
+                <button type="submit" form="login-form">Log In</button>
+            </div>
+        </section>
+
+        <section class="chat-section">
+            <div class="active-people">
+                <h1>Active People</h1>
+                <div class="people">
+                    
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-title">🌿 Green Chat 🌿</div>
+                <div class="main-chat">
+                </div>
+                <div class="send">
+                    <div id="msg-form" class="send-msg">
+                        <form id="send-form">
+                        <input type="text" placeholder="Send Message" id="message" maxlength="250" minlength="1">
+                        <button id="send-btn">Send</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

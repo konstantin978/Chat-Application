@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 Signup | Green Chat 🌿</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="heading">🌿 Welcome to the Green Chat 🌿</h1>
+    </header>
+
+    <main>
+        <section class="container">
+            <h1 class="title">Sign Up</h1>
+            <div class="form-container">
+                <form id="signup-form" class="form">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" required placeholder="Your name" maxlength="16">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" required placeholder="Your username">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required placeholder="Your Email">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" required placeholder="Your Password">
+                </form>
+            </div>
+
+            <div class="switch">
+                <p>Already have an account. <a href="index.html">Log In</a></p>
+            </div>
+
+            <div class="success-msg">
+                <p>You are Registered Successfully</p>
+            </div>
+
+            <div class="submit-btn">
+                <button type="submit" form="signup-form">Sign Up</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
