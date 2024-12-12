@@ -9,6 +9,7 @@ const User = require('./models/User');
 const chatRouter = require('./routes/chat');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const dotenv = require('dotenv').config();
 
 
 const app = express();
@@ -40,11 +41,11 @@ app.post('/refresh', (req, res) => {
 	}
 
 	try {
-		const decoded = jwt.verify(refreshToken, secretKey);
+		const decoded = jwt.verify(refreshToken, dotenv.parsed.JWT_SECRET);
 
-		const accessToken = jwt.sign({ user: decoded.user }, secretKey, { expiresIn: '1h' });
+		const accessToken = jwt.sign({ user: decoded.user }, dotenv.parsed.JWT_SECRET, { expiresIn: '1h' });
 
-		const newRefreshToken = jwt.sign({ user: decoded.user }, secretKey, { expiresIn: '1d' });
+		const newRefreshToken = jwt.sign({ user: decoded.user }, dotenv.parsed.JWT_SECRET, { expiresIn: '1d' });
 
 		res.cookie('refreshToken', newRefreshToken, {
 			httpOnly: true,
